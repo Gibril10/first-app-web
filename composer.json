@@ -1,0 +1,35 @@
+{
+  "name": "dev-web/web-php",
+  "description": "Première application web en PHP",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "DevWeb\\WebPhp\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "hemery",
+      "email": "fred.hemery@univ-artois.fr"
+    }
+  ],
+
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit --testdox",
+    "test-html": "vendor/bin/phpunit --testdox-html first-app.html"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.0",
+    "fakerphp/faker": "^v1.23.1"
+  },
+  "require": {
+    "pecee/simple-router": "^5.0",
+    "eftec/bladeone": "^4.0"
+  }
+}
+
