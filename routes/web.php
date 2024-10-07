@@ -1,8 +1,11 @@
 <?php
 
 // routes/web.php
-use DevWeb\WebPhp\Controllers\Welcome;
+use DevWeb\WebPhp\Controllers\PersonnesControleur;
 use Pecee\SimpleRouter\SimpleRouter;
+
+// Route pour la liste des personnes
+SimpleRouter::get('/personnes', [PersonnesControleur::class, 'index']);
 
 // Route pour afficher le formulaire
 SimpleRouter::get('/formulaire', [Welcome::class, 'declenche']);
