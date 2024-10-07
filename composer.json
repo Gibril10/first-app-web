@@ -28,7 +28,7 @@
     "fakerphp/faker": "^v1.23.1"
   },
   "require": {
-    "pecee/simple-router": "^5.0",
+    "pecee/simple-router": "^5.4",
     "eftec/bladeone": "^4.13"
   }
 }
