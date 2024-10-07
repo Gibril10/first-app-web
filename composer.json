@@ -29,7 +29,6 @@
   },
   "require": {
     "pecee/simple-router": "^5.0",
-    "eftec/bladeone": "^4.0"
+    "eftec/bladeone": "^4.13"
   }
 }
-
