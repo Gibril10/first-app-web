@@ -18,4 +18,22 @@ class PersonnesControleur {
         // Rendre la vue index avec la liste des personnes
         return App::getBladeInstance()->run('index', ['personnes' => $personnes]);
     }
+
+    // Fonction pour afficher une personne par ID
+    public function show($id) {
+        // Récupérer l'instance de BDMapper
+        $bdMapper = BDMapper::getInstance();
+
+        // Récupérer la personne par ID
+        $personne = $bdMapper->findById($id);
+
+        // Vérifier si la personne existe
+        if ($personne) {
+            // Rendre la vue show avec les détails de la personne
+            return App::getBladeInstance()->run('show', ['personne' => $personne]);
+        } else {
+            // Rendre la vue page404 si la personne n'existe pas
+            return App::getBladeInstance()->run('page404');
+        }
+    }
 }
